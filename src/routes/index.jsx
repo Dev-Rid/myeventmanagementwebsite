@@ -19,7 +19,7 @@ export const route = createBrowserRouter([
             },
             {
                 path: "/service",
-                element: <h2>contact Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
+                element: 
             },
             {
                 path: "/event",
