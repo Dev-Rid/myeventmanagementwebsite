@@ -1,4 +1,7 @@
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "react-router-dom"
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const Home = () => {
   return (
@@ -86,22 +89,20 @@ const Home = () => {
         </div>
 
 
-        <div className="flex justify-center p-20 h-80 my-10">
+        <div className="flex justify-center p-20 h-54 my-10">
           <span>
-            <Link>
-              FB icon
+            <Link className='text-3xl'>
+                <FontAwesomeIcon icon={faFacebook} />
             </Link>
           </span>
-          <span>
-            <img src="" alt="calgary" />
-          </span>
         </div>
+        
       </div>
 
-      <footer className="bg-gray-500 h-96 p-10 block justify-center">
-        <p className="flex justify-center">Spark Event Management, 200 - 1110 7 Street SW, Calgary, Alberta, T2R 1A2, Canadainfo@eventsbyspark.com</p>
+        <footer className="bg-gradient-to-r from-purple-900 to-pink-900 h-96 p-10 block justify-center">
+        <p className="flex justify-center font-sans text-lg">Spark Event Management, 200 - 1110 7 Street SW, Calgary, Alberta, T2R 1A2, Canadainfo@eventsbyspark.com</p>
         <div className="p-10 flex justify-center h-52 w-full ">
-          <span >
+          {/* <span >
             <Link>
               <img src="" alt="img1" />
             </Link>
@@ -120,9 +121,9 @@ const Home = () => {
               <Link>
                 <img src="" alt="img4" />
               </Link>
-          </span>
+          </span> */}
         </div>
-        <p className="flex justify-center align-bottom font-serif text-gray-700 font-semibold">Powered by Abiolaspace</p>
+          <p className="flex justify-center align-bottom font-serif text-gray-400 font-semibold gap-2">Powered by <span className='underline'>Abiolaspace</span></p>
       </footer>
 
     </div>
