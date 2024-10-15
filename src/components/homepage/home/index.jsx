@@ -24,6 +24,22 @@ const Home = () => {
         <h2 className="text-8xl">Event Planing</h2>
           <p className="text-4xl pt-3"> Is Our Passion</p>
       </div>
+
+
+      <div className="bg-gray-200 p-10 inline-block">
+          <h2 className="text-center p-10 text-lg w-auto">Spark approaches every project with meticulous attention to detail and 
+            obsessive precision. Regardless of size and scope, we treat your event 
+            like a business with clear strategic goals, defined milestones, and a 
+            comprehensive plan to ensure that your event is delivered on time and on budget. 
+            At Spark, we put your organization first. We learn about your business, we focus 
+            on your challenges, and we plan events to support your goals.
+          </h2>
+
+          <div className="rounded-lg flex justify-center border-b bottom-2">
+            <img className="rounded-lg w-[45rem] mx-auto" src="/src/IMGs/image3.jpg" alt="" srcset="" />
+          </div>
+
+      </div>
     </div>
   </>
 
