@@ -16,12 +16,8 @@ export const route = createBrowserRouter([
                 element: <h2>About Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, neque?</h2>
             },
             {
-                path: "/contact",
+                path: "/service",
                 element: <h2>contact Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
-            },
-            {
-                path: "/careers",
-                element: <h2>careers Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
             },
             {
                 path: "/event",
@@ -30,6 +26,10 @@ export const route = createBrowserRouter([
             {
                 path: "/blog",
                 element: <h2>blog Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
+            },
+            {
+                path: "/meeting",
+                element: <h2>meeting Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
             },
 
         ],

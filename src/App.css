@@ -17,10 +17,8 @@
 
 .primary2{
   background-image: url(/src//IMGs/night-sky2.jpg);
-  /* background-size: cover; */
-  
+  opacity: 0.80;
 }
-
 
 /* .navStyle{
   width: 100%;

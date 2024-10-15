@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Home = () => {
   return (
   <>
@@ -26,7 +28,7 @@ const Home = () => {
       </div>
 
 
-      <div className="bg-gray-200 p-10 inline-block">
+        <div className="bg-gray-400 p-10 border-b-2 pb-36">
           <h2 className="text-center p-10 text-lg w-auto">Spark approaches every project with meticulous attention to detail and 
             obsessive precision. Regardless of size and scope, we treat your event 
             like a business with clear strategic goals, defined milestones, and a 
@@ -35,11 +37,94 @@ const Home = () => {
             on your challenges, and we plan events to support your goals.
           </h2>
 
-          <div className="rounded-lg flex justify-center border-b bottom-2">
+          <div className="rounded-lg flex justify-center mt-10">
             <img className="rounded-lg w-[45rem] mx-auto" src="/src/IMGs/image3.jpg" alt="" srcset="" />
           </div>
-
       </div>
+
+
+      <div className="bg-gray-400 p-14">
+        <div>
+            <h2 className="headline text-center text-4xl font-semibold">How It Works</h2>
+          <p className="text-center p-5 text-lg uppercase font-semibold">LEARN: We want to get to know you</p>
+            <span className="text-center flex justify-center text-lg mx-auto w-[80%]">
+            What is your business about? What are your challenges? What are the issues that your members 
+            or clients are dealing with? By thoroughly understanding your company’s leadership 
+            culture, how your organization operates and your long term strategic plans, we become
+            a part of your team. Our model works best when we can become more than the “hired help” 
+            and can become strategic event management partners, so the first step for us is about 
+            getting to know you and your business.
+          </span>
+        </div>
+
+          <div className="pt-12">
+            <p className="title text-center p-3 text-lg uppercase font-semibold">BUILD: Let us do the heavy lifting.</p>
+          <span className="text-center flex justify-center text-lg mx-auto w-[80%]">
+            Because we have taken the time to learn about your business and the goals of your event, 
+            you can rest assured that the event will be on target and in line with your objectives. 
+            Leave the planning and management to us. Let us look after the details and the heavy lifting 
+            that comes with planning a professional event. From our network of preferred vendors, industry 
+            connections and years of experience, we can deliver a full service event management experience. 
+            The Spark team is well equipped to deliver a world class event, each and every time. 
+            Your job is to run your business; our job is to run your event.
+          </span>
+        </div>
+
+        <div className="pt-12">
+            <p className="title text-center p-3 text-lg uppercase font-semibold">DELIVER: Sit back. Relax.</p>
+            <span className="text-center flex text-lg mx-auto w-[80%]">
+            Finally, this is where our event management expertise comes into play. 
+            At our core, we love events. We love the on-site details, production plans, 
+            schedules, deadlines and to do lists that come along with managing an event. 
+            From meticulous management of facility details to AV, catering and on-site 
+            coordination, we ensure every detail is looked after. Managing your event 
+            using a strategic overall plan and a methodical management approach allows 
+            you to rest easy. Knowing that every last detail is looked after will allow 
+            you to focus on your attendees and stakeholders at the event. Let us look 
+            after the rest.
+          </span>
+        </div>
+
+
+        <div className="flex justify-center p-20 h-80 my-10">
+          <span>
+            <Link>
+              FB icon
+            </Link>
+          </span>
+          <span>
+            <img src="" alt="calgary" />
+          </span>
+        </div>
+      </div>
+
+      <footer className="bg-gray-500 h-96 p-10 block justify-center">
+        <p className="flex justify-center">Spark Event Management, 200 - 1110 7 Street SW, Calgary, Alberta, T2R 1A2, Canadainfo@eventsbyspark.com</p>
+        <div className="p-10 flex justify-center h-52 w-full ">
+          <span >
+            <Link>
+              <img src="" alt="img1" />
+            </Link>
+          </span>
+          <span>
+              <Link>
+                <img src="" alt="img2" />
+              </Link>
+          </span>
+          <span>
+            <Link>
+              <img src="" alt="img3" />
+            </Link>
+          </span>
+          <span>
+              <Link>
+                <img src="" alt="img4" />
+              </Link>
+          </span>
+        </div>
+        <p className="flex justify-center align-bottom font-serif text-gray-700 font-semibold">Powered by Abiolaspace</p>
+      </footer>
+
     </div>
   </>
 
