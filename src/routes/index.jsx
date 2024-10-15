@@ -18,8 +18,8 @@ export const route = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/about",
-                element: <About/>
+                path: "/home",
+                element: <Home/>
             },
             {
                 path: "/service",
