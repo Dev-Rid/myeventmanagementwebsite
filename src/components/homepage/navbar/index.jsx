@@ -11,9 +11,9 @@ const Navbar = () => {
 
             <div className="flex space-x-6 text-gray-300 text-sm md:text-lg font-semibold">
 
-                <Link to="/about ">ABOUT</Link>
+                <Link to="/about">ABOUT</Link>
             
-                <Link to="/contact">SERVICES</Link>
+                <Link to="/service">SERVICES</Link>
 
                 <Link to="/event">EVENT</Link>
             
