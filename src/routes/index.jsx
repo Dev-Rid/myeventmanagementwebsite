@@ -3,6 +3,10 @@ import Homepage from "../components/homepage";
 import Home from "../components/homepage/home";
 import ErrorPage from "../errorpage";
 import About from "../components/homepage/about";
+import Service from "../components/homepage/service";
+import Event from "../components/homepage/event";
+import Blog from "../components/homepage/blog";
+import Meeting from "../components/homepage/meeting";
 
 export const route = createBrowserRouter([
     {
@@ -19,19 +23,19 @@ export const route = createBrowserRouter([
             },
             {
                 path: "/service",
-                element: 
+                element: <Service/>
             },
             {
                 path: "/event",
-                element: <h2>event Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
+                element: <Event/>
             },
             {
                 path: "/blog",
-                element: <h2>blog Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
+                element: <Blog/>
             },
             {
                 path: "/meeting",
-                element: <h2>meeting Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, nisi!</h2>
+                element: <Meeting/>
             },
 
         ],
