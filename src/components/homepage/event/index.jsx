@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Event = () => {
   return (
-    <div className=''>
+    <div className='bg-gray-500'>
      <div>
       <h2>Busy, Busy, Busy</h2>
       <p>A few of our recent events</p>
