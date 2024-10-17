@@ -33,4 +33,11 @@
 /* service page */
 .service{
   background-image: url(./IMGs/service.jpg);
+  opacity: 0.50;
+  color: rgb(255, 252, 252);
+}
+
+.service-cont-1{
+  /* word-spacing: 8px; */
+  /* letter-spacing: 2px; */
 }
