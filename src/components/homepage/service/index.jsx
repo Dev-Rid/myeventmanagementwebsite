@@ -28,8 +28,8 @@ const Service = () => {
           <div key={eachEvent.id} className="w-[80rem] relative">
             <h3 className="text-center pb-8 uppercase font-semibold text-lg">{eachEvent.name}</h3>
             <img src={eachEvent.image} className="" />
-            <div className="absolute bg-black h-10">
-              <p className=" text-center h-32">{eachEvent.description} </p>
+            <div className="text-center absolut top-10 h-10">
+              {/* <p className=" ">{eachEvent.description} </p> */}
             </div>
             {/* <Link to={eachEvent.link} className="flex justify-start pt-10">Learn More</Link> */}
           </div>
