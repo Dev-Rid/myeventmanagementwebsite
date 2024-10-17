@@ -2,10 +2,15 @@ import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "react-router-dom"
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { useHowItWork} from './hooks'
+
 
 const Home = () => {
+
+  const { howItWorkList } = useHowItWork()
+
   return (
-  <>
+  <div>
       <div className="h-dvh bg-gray-500">
       <div className='primary h-[30rem] mydiv pt-5'>
           <h2 className="text-center text-gray-400 text-7xl pt-16 font-semibold">Event Planning Is <br /> Hard.</h2>
@@ -49,10 +54,19 @@ const Home = () => {
       </div>
 
 
+      
       <div className="bg-gray-400 p-14">
         <span>
             <h2 className="headline text-center text-4xl font-semibold">How It Works</h2>
         </span>
+        <div>
+            {howItWorkList.map((eachList) =>(
+              <div className='' key={eachList.id}>
+                <p className="text-center p-5 text-lg uppercase font-semibold">{eachList.title}</p>
+                <span className="text-center flex justify-center text-lg mx-auto w-[80%]">{eachList.description}</span>
+              </div>         
+            ))}
+        </div>
         {/* <div>
             <h2 className="headline text-center text-4xl font-semibold">How It Works</h2>
           <p className="text-center p-5 text-lg uppercase font-semibold">LEARN: We want to get to know you</p>
@@ -133,7 +147,7 @@ const Home = () => {
       </footer>
 
     </div>
-  </>
+  </div>
 
   )
   
