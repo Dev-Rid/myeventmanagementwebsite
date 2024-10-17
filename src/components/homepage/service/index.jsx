@@ -1,17 +1,21 @@
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
+import { threeEvents } from "./hook"
 
 const Service = () => {
+
+  const { theThreeEventsList } = threeEvents() 
+
   return (
     <div className=" bg-gray-500">
-      <div className="service h-[18rem]">
-        <h2>Talent & Skill</h2>
-        <p>There are no hurdles we can‘t jump</p>
+      <div className="service h-[18rem] text-center text-gray-100 pt-20">
+        <h2 className="text-8xl">Talent & Skill</h2>
+        <p className="text-4xl pt-5 uppercase">There are no hurdles we can‘t jump</p>
        </div>
 
-       <div>
-        <p>
+       <div className="text-center flex justify-center text-4xl mx-auto w-[80%] pt-20 leading-snug tracking-wide font-light border-b pb-20">
+        <p className="service-cont-1">
           Spark has a diverse team, each offering expert knowledge in their field. 
           From strategy planning, budgeting,and comprehensive registration support 
           to marketing and branding we bring the most current, innovative and professional 
@@ -19,11 +23,21 @@ const Service = () => {
         </p>
        </div>
 
-       <div>
+      <div>
+        {(theThreeEventsList.map((eachEvent) =>(
+          <div key={eachEvent.id}>
+            <img src={eachEvent.img} alt={eachEvent.title} />
+            <h3>{eachEvent.title}</h3>
+            <p>{eachEvent.description}</p>
+            <Link to={eachEvent.link}>Learn More</Link>
+          </div>
+        )))}
+      </div>
+      {/* <div className="flex gap-10 p-10 rounded-2xl">
         <div>
           <p>Corporate Events</p>
           <span>
-            <img src="" alt="" />
+            <img src="/src/IMGs/Services-coporate-event-1.jpg" alt="" />
           </span>
           <Link>Learn More</Link>
         </div>
@@ -31,7 +45,7 @@ const Service = () => {
         <div>
           <p>Association Events</p>
           <span>
-            <img src="" alt="" />
+            <img src="/src/IMGs/Services-association-event.jpg" alt="" />
           </span>
           <Link>Learn More</Link>
         </div>
@@ -39,19 +53,19 @@ const Service = () => {
         <div>
           <p>NoT-For-Profit Events</p>
           <span>
-            <img src="" alt="" />
+            <img src="/src/IMGs/Services-not-for-profit.jpg" alt="" />
           </span>
           <Link>Learn More</Link>
         </div>
-       </div>
+      </div> */}
 
-       <div>
+       {/* <div>
         <img src="" alt="one" />
        </div>
 
        <div>
         <img src="" alt="two" />
-       </div>
+       </div> */}
 
       <div className="flex justify-center p-20 h-54 my-10">
         <Link className='text-3xl'>
