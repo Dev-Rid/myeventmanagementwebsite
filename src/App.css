@@ -28,3 +28,9 @@
   box-shadow: 10px 10px 20px #111,
           -10px -10px 20px #ddd;
 } */
+
+
+/* service page */
+.service{
+  background-image: url(./IMGs/service.jpg);
+}

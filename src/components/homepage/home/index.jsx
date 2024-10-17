@@ -31,6 +31,9 @@ const Home = () => {
       </div>
 
 
+
+          <div className="rounded-lg flex justify-center mt-10">
+            <img className="rounded-lg w-[45rem] mx-auto" s
         <div className="bg-gray-400 p-10 border-b-2 pb-36">
           <h2 className="text-center p-10 text-lg w-auto">Spark approaches every project with meticulous attention to detail and 
             obsessive precision. Regardless of size and scope, we treat your event 
@@ -38,10 +41,7 @@ const Home = () => {
             comprehensive plan to ensure that your event is delivered on time and on budget. 
             At Spark, we put your organization first. We learn about your business, we focus 
             on your challenges, and we plan events to support your goals.
-          </h2>
-
-          <div className="rounded-lg flex justify-center mt-10">
-            <img className="rounded-lg w-[45rem] mx-auto" src="/src/IMGs/image3.jpg" alt="" srcset="" />
+          </h2>rc="/src/IMGs/image3.jpg" alt="" srcset="" />
           </div>
       </div>
 

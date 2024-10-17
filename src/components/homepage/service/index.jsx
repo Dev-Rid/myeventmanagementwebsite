@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 
 const Service = () => {
   return (
-    <div className="bg-gray-500">
-       <div>
+    <div className=" bg-gray-500">
+      <div className="service h-[18rem]">
         <h2>Talent & Skill</h2>
         <p>There are no hurdles we can‘t jump</p>
        </div>
