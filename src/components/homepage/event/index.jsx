@@ -6,28 +6,24 @@ import { Link } from 'react-router-dom'
 const Event = () => {
   return (
     <div className='bg-gray-500'>
-     <div>
-      <h2>Busy, Busy, Busy</h2>
-      <p>A few of our recent events</p>
+      <div className="event-busy h-[18rem] text-center text-gray-100 pt-20 bg-cover">
+        <h2 className='text-8xl'>Busy, Busy, Busy</h2>
+        <p className='text-4xl pt-5 uppercase'>A few of our recent events</p>
      </div>
 
-      <div>
-        <h3>Wow, we've had a busy year... but always make time for fun!</h3>
+      <div className='text-center pt-10'> 
+        <h3 className='text-semibold text-3xl'>Wow, we've had a busy year... but always make time for fun!</h3>
         
-        <p>
+        <p className='p-5 text-center flex justify-center text-lg mx-auto w-[60%]'>
           Our clients include not-for-profit organizations, corporate clients,  
           regulating bodies and member associations. Each of these organizations  
           has a unique set of business goals and challenges, and has chosen Spark  
           because we understand the business of running events.
         </p>
 
-        <span>
-          <img src="" alt="" />
-        </span>
-
         <div>
-          <span>
-            <img src="" alt="" />
+          <span className='pminac h-[18rem] bg-cover'>
+            <p>PMINAC Conference</p>
           </span>
           <h3>PMINAC Conference</h3>
           <p>
