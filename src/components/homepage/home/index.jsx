@@ -50,7 +50,10 @@ const Home = () => {
 
 
       <div className="bg-gray-400 p-14">
-        <div>
+        <span>
+            <h2 className="headline text-center text-4xl font-semibold">How It Works</h2>
+        </span>
+        {/* <div>
             <h2 className="headline text-center text-4xl font-semibold">How It Works</h2>
           <p className="text-center p-5 text-lg uppercase font-semibold">LEARN: We want to get to know you</p>
             <span className="text-center flex justify-center text-lg mx-auto w-[80%]">
@@ -89,7 +92,7 @@ const Home = () => {
             you to focus on your attendees and stakeholders at the event. Let us look 
             after the rest.
           </span>
-        </div>
+        </div> */}
 
 
         <div className="flex justify-center p-20 h-54 my-10">
