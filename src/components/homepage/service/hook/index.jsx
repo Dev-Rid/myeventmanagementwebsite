@@ -21,7 +21,7 @@ export const threeEvents = () => {
 
     ]
 
-    return{
+    return {
         theThreeEventsList
     }
 }
