@@ -25,11 +25,13 @@ const Service = () => {
 
       <div className="flex gap-5 p-20 w-[100%]">
         {(theThreeEventsList.map((eachEvent) =>(
-          <div key={eachEvent.id} className="w-[80rem] ">
+          <div key={eachEvent.id} className="w-[80rem] relative">
             <h3 className="text-center pb-8 uppercase font-semibold text-lg">{eachEvent.name}</h3>
             <img src={eachEvent.image} className="relativ" />
-            <p className="absolut text-center">{eachEvent.description} </p>
-            {/* <Link to={eachEvent.link}>Learn More</Link> */}
+            <div className="absolute bg-black h-10">
+              <p className=" text-center h-32">{eachEvent.description} </p>
+            </div>
+            {/* <Link to={eachEvent.link} className="flex justify-start pt-10">Learn More</Link> */}
           </div>
         )))}
       </div>
