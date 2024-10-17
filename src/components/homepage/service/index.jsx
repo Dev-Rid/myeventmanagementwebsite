@@ -23,42 +23,17 @@ const Service = () => {
         </p>
        </div>
 
-      <div>
+      <div className="flex gap-5 p-20 w-[100%]">
         {(theThreeEventsList.map((eachEvent) =>(
-          <div key={eachEvent.id}>
-            <img src={eachEvent.img} alt={eachEvent.title} />
-            <h3>{eachEvent.title}</h3>
-            <p>{eachEvent.description}</p>
-            <Link to={eachEvent.link}>Learn More</Link>
+          <div key={eachEvent.id} className="w-[80rem] ">
+            <h3 className="text-center pb-8 uppercase font-semibold text-lg">{eachEvent.name}</h3>
+            <img src={eachEvent.image} className="relativ" />
+            <p className="absolut text-center">{eachEvent.description} </p>
+            {/* <Link to={eachEvent.link}>Learn More</Link> */}
           </div>
         )))}
       </div>
-      {/* <div className="flex gap-10 p-10 rounded-2xl">
-        <div>
-          <p>Corporate Events</p>
-          <span>
-            <img src="/src/IMGs/Services-coporate-event-1.jpg" alt="" />
-          </span>
-          <Link>Learn More</Link>
-        </div>
-
-        <div>
-          <p>Association Events</p>
-          <span>
-            <img src="/src/IMGs/Services-association-event.jpg" alt="" />
-          </span>
-          <Link>Learn More</Link>
-        </div>
-
-        <div>
-          <p>NoT-For-Profit Events</p>
-          <span>
-            <img src="/src/IMGs/Services-not-for-profit.jpg" alt="" />
-          </span>
-          <Link>Learn More</Link>
-        </div>
-      </div> */}
-
+     
        {/* <div>
         <img src="" alt="one" />
        </div>
