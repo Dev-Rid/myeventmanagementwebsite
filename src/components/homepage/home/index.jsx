@@ -59,9 +59,9 @@ const Home = () => {
         <span>
             <h2 className="headline text-center text-4xl font-semibold">How It Works</h2>
         </span>
-        <div>
+        <div className="">
             {howItWorkList.map((eachList) =>(
-              <div className='' key={eachList.id}>
+              <div className='pt-10' key={eachList.id}>
                 <p className="text-center p-5 text-lg uppercase font-semibold">{eachList.title}</p>
                 <span className="text-center flex justify-center text-lg mx-auto w-[80%]">{eachList.description}</span>
               </div>         

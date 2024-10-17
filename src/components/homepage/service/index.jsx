@@ -27,7 +27,7 @@ const Service = () => {
         {(theThreeEventsList.map((eachEvent) =>(
           <div key={eachEvent.id} className="w-[80rem] relative">
             <h3 className="text-center pb-8 uppercase font-semibold text-lg">{eachEvent.name}</h3>
-            <img src={eachEvent.image} className="relativ" />
+            <img src={eachEvent.image} className="" />
             <div className="absolute bg-black h-10">
               <p className=" text-center h-32">{eachEvent.description} </p>
             </div>
