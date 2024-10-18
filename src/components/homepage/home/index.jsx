@@ -33,7 +33,7 @@ const Home = () => {
       </div>
 
     
-      <div className="primary2 pt-20 h-[20rem] text-xl  text-center">
+      <div className="primary2 text-gray-400 pt-20 h-[20rem] text-xl  text-center">
         <h2 className="text-8xl">Event Planing</h2>
           <p className="text-4xl pt-3"> Is Our Passion</p>
       </div>
