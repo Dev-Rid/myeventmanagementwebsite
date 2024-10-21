@@ -56,8 +56,9 @@ const Event = () => {
           </span>        
         </div>
 
-        <div>
-          <p>
+        <div className='my-10'>
+          <h2 className='font-semilight text-2xl'> Alberta Energy Efficiency Summit</h2>
+          <p className='p-3 w-[60%] mx-auto'>
             What started out as registration support for a one-day event has flourished
             into a collaborative relationship with one of our favourite client events.
             Spark supported with a complete rebrand of the Alliance and moved on to plan
@@ -67,21 +68,8 @@ const Event = () => {
           </p>
         </div>
 
-        <div>
-          <img src="" alt="" />
-        </div>
-
-        <div>
-          <img src="" alt="" />
-          <img src="" alt="" />
-        </div>
-
-        <div>
-            <h3>PMI-SAC</h3>
-            <h3>Professional Development Conference</h3>
-        </div>
-
-        <div>
+    
+        {/* <div>
           <h3>PMI-SAC Professional Development Conference</h3>
           <p>
             You can probably sense a pattern here. We seem to have 
@@ -92,14 +80,14 @@ const Event = () => {
             comes the program, marketing, and attendee engagement. Oh, and our 
             fellow Calgarian volunteers aren’t so bad either!
           </p>
-        </div>
+        </div> */}
 
         <div>
           <img src="" alt="" />
           <img src="" alt="" />
         </div>
 
-        <div>
+        {/* <div>
           <h3>Just a few of our happy clients.</h3>
           <span>
             <img src="" alt="" />
@@ -120,7 +108,7 @@ const Event = () => {
             <img src="" alt="" />
             <img src="" alt="" />
             </span>
-        </div>
+        </div> */}
 
       <div className='flex justify-center p-20 h-54 my-10'>
         <Link className='text-3xl'>
