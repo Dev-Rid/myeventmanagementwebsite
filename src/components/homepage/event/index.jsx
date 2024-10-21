@@ -41,28 +41,30 @@ const Event = () => {
           </div>
         </div>
 
-        <div className='grid w-[100%] gap-3 p-8 '>
+        <div className='grid grid-cols-4 gap-3 p-8'>
           {
             imgs.map((img, i) => {
               return <UseEventImgsHook key={i} imgsprop={img}/>
             })
           }
-    
+        </div>
+
+        <div className='albertia h-[18rem] bg-cover my-14 text-gray-400'>
+          {/* <img src="/src/IMGs/bigevent5.jpg" alt="" className='' /> */}
+          <span className='text-7xl p-10 font-semibold'>
+              <h3>Alberta Energy <br /> Efficiency Summit</h3>
+          </span>        
         </div>
 
         <div>
-          <img src="" alt="" />
-          <span>
-              <h3>Alberta Energy Efficiency Summit</h3>
-              <p>
-                What started out as registration support for a one-day event has flourished
-                into a collaborative relationship with one of our favourite client events. 
-                Spark supported with a complete rebrand of the Alliance and moved on to plan 
-                the first-ever two-day Alberta Energy Efficiency Summit. Watching this client’s 
-                growth and development has been rewarding and we can’t wait to see what’s in store
-                for the future!
-              </p>
-          </span>        
+          <p>
+            What started out as registration support for a one-day event has flourished
+            into a collaborative relationship with one of our favourite client events.
+            Spark supported with a complete rebrand of the Alliance and moved on to plan
+            the first-ever two-day Alberta Energy Efficiency Summit. Watching this client’s
+            growth and development has been rewarding and we can’t wait to see what’s in store
+            for the future!
+          </p>
         </div>
 
         <div>
