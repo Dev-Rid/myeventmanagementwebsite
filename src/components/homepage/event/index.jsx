@@ -2,8 +2,11 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useImgs } from './hooks'
+import UseEventImgsHook from './hooks/useEventImgsHook'
 
 const Event = () => {
+  const { imgs } = useImgs()
   return (
     <div className='bg-gray-500'>
       <div className="event-busy h-[18rem] text-center text-gray-100 pt-20 bg-cover">
@@ -22,28 +25,29 @@ const Event = () => {
         </p>
 
         <div>
-          <span className='pminac h-[18rem] bg-cover'>
-            <p>PMINAC Conference</p>
-          </span>
-          <h3>PMINAC Conference</h3>
-          <p>
-              We have worked with the Project Management Institute Northern Alberta 
-              Chapter for over a decade and it’s safe to say we feel like a part of the 
-              family. From the familiar faces in the crowd of attendees, to the trust 
-              built with sponsors and speakers, the committee and board can count on us
-              to represent their Chapter and execute a seamless conference!
-          </p>
+          <div className='pminac h-[12rem] bg-contain text-gray-300'>
+            <p className='text-7xl p-10'>PMINAC Conference</p>
+          </div>
+
+          <div className='p-20'>
+            <h3 className='text-2xl'>PMINAC Conference</h3>
+            <p className='p-3 w-[60%] mx-auto '>
+                We have worked with the Project Management Institute Northern Alberta 
+                Chapter for over a decade and it’s safe to say we feel like a part of the 
+                family. From the familiar faces in the crowd of attendees, to the trust 
+                built with sponsors and speakers, the committee and board can count on us
+                to represent their Chapter and execute a seamless conference!
+            </p>
+          </div>
         </div>
 
-        <div>
-          <div>
-              <img src="" alt="" />
-              <img src="" alt="" />
-          </div>
-          <div>
-            <img src="" alt="" />
-            <img src="" alt="" />
-          </div>
+        <div className='grid w-[100%] gap-3 p-8 '>
+          {
+            imgs.map((img, i) => {
+              return <UseEventImgsHook key={i} imgsprop={img}/>
+            })
+          }
+    
         </div>
 
         <div>
