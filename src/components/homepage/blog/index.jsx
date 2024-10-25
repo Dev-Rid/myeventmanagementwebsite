@@ -8,6 +8,10 @@ const Blog = () => {
 
   const { blogPreContent } = blogContent()
   
+  const handleGoToAnotherPage = (e) => {
+    e.preventDefault() 
+  }
+  
   return (
     <div className="bg-gray-500">
       <div className='blogBg h-[18rem] bg-cover text-center pt-20 opacity-30'>
@@ -15,17 +19,17 @@ const Blog = () => {
       </div>
 
     <div className='grid grid-cols-4'>
-      <div className='col-span-3'>
+        <div className='col-span-3'>
           {(blogPreContent.map((eachBlog) => (
-            <div className=''>
-              <div key={eachBlog.id} className='flex px-20 py-16'>
+            <div className='' key={eachBlog.id}>
+              <div  className='flex px-20 py-16'>
                 <div>
                   <img src={eachBlog.image} alt="" className='cursor-pointer h-[9rem] w-[15rem] rounded-sm my-2' />
                 </div>
                 <div className='w-[50%] mx-5'>
                   <h1 className='text-2xl'>{eachBlog.title}</h1>
                   <p className='py-1 font-semilight'>{eachBlog.body}</p>
-                  <a href="" className='font-light'>{eachBlog.more}</a>
+                  <a href="" className='font-light' onClick={handleGoToAnotherPage} >{eachBlog.more}</a>
                   <div className='flex font-light py-3'>
                     <p className='pr-3'>{eachBlog.writer}</p> •
                     <p className='mx-2'>{eachBlog.date}</p>
@@ -55,11 +59,9 @@ const Blog = () => {
               <option value="option10">Oct 29, 2012</option>
               <option value="option11">Jul 31, 2015</option>
               <option value="option">Jan 23, 2013</option>
-
-
             </select>
           </div>
-        </div>
+      </div>
     </div>
       
  
@@ -73,26 +75,7 @@ const Blog = () => {
       <footer className="bg-gradient-to-r from-purple-900 to-pink-900 h-96 p-10 block justify-center">
         <p className="flex justify-center font-sans text-lg">Spark Event Management, 200 - 1110 7 Street SW, Calgary, Alberta, T2R 1A2, Canadainfo@eventsbyspark.com</p>
         <div className="p-10 flex justify-center h-52 w-full ">
-          {/* <span >
-            <Link>
-              <img src="" alt="img1" />
-            </Link>
-          </span>
-          <span>
-              <Link>
-                <img src="" alt="img2" />
-              </Link>
-          </span>
-          <span>
-            <Link>
-              <img src="" alt="img3" />
-            </Link>
-          </span>
-          <span>
-              <Link>
-                <img src="" alt="img4" />
-              </Link>
-          </span> */}
+
         </div>
         <p className="flex justify-center align-bottom font-serif text-gray-400 font-semibold gap-2">Powered by <span className='underline'>Abiolaspace</span></p>
       </footer>
