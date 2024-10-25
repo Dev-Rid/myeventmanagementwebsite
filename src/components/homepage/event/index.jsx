@@ -97,7 +97,7 @@ const Event = () => {
             <img src="" alt="" />
             <img src="" alt="" />
             <img src="" alt="" />
-            <img src="" alt="" />
+            <img src="" alt="" /> 
           </span>
           <span>
             <img src="" alt="" />
