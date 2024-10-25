@@ -6,11 +6,13 @@ import { Link } from 'react-router-dom'
 const Blog = () => {
   return (
     <div className="bg-gray-500">
-      <div>
-        <h2>Thoughts & News</h2>
+      <div className='blogBg h-[18rem] bg-cover text-center pt-20 opacity-30'>
+        <h2 className='text-8xl font-semilight text-gray-400'>Thoughts & News</h2>
       </div>
 
-      <div>
+
+      { }
+      {/* <div>
         <div>
           <div>
             <img src="" alt="" />
@@ -197,7 +199,7 @@ const Blog = () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
 
 

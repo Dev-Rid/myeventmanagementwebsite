@@ -109,13 +109,7 @@ const Event = () => {
             <img src="" alt="" />
             </span>
         </div> */}
-
-      <div className='flex justify-center p-20 h-54 my-10'>
-        <Link className='text-3xl'>
-          <FontAwesomeIcon icon={faFacebook} />
-        </Link>
-      </div>
-
+  
         <footer className="bg-gradient-to-r from-purple-900 to-pink-900 h-96 p-10 block justify-center">
           <p className="flex justify-center font-sans text-lg">Spark Event Management, 200 - 1110 7 Street SW, Calgary, Alberta, T2R 1A2, Canadainfo@eventsbyspark.com</p>
           <div className="p-10 flex justify-center h-52 w-full ">

@@ -60,3 +60,15 @@
 .albertia{
   background-image: url(/src/IMGs/bigevent5.jpg);
 }
+
+
+/* blog */
+.blogBg{
+  background-image: url(/src/IMGs//blogbg.jpg);
+  /* opacity: 0.60; */
+}
+
+
+/* .bgtext{
+  color: white;
+} */
