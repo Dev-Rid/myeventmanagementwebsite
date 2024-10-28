@@ -30,7 +30,7 @@ const Blog = () => {
                   <h1 className='text-2xl'>{eachBlog.title}</h1>
                   <p className='py-1 font-semilight'>{eachBlog.body}</p>
                   <a href="" className='font-light' onClick={handleGoToAnotherPage} >{eachBlog.more}</a>
-                  <div className='flex font-light py-3'>
+                  <div className='flex font-light py-3 cursor-pointer'>
                     <p className='pr-3'>{eachBlog.writer}</p> •
                     <p className='mx-2'>{eachBlog.date}</p>
                   </div>

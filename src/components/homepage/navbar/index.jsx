@@ -20,7 +20,7 @@ const Navbar = () => {
                 <Link to="/blog">BLOG</Link>
 
               <span className='border border-gray-500 rounded-sm px-6'>
-                <Link to="/blog" className='text-sm'>SET UP A MEETING</Link>
+                <Link to="/meeting" className='text-sm'>SET UP A MEETING</Link>
               </span>
 
             </div>

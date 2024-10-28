@@ -4,66 +4,80 @@ const Meeting = () => {
   return (
     <div className='bg-gray-500'>
       <div>
-        <div>
-          <h2>Busy, Busy, Busy</h2>
-          <p>A few of our recent events</p>
-        </div>
+          <div className='meeting h-[18rem] text-center text-gray-100 pt-20'>
+            <h2 className='text-8xl font-semibold text-gray-300'>Set Up A Meeting</h2>
+          </div>
 
-      <div>
-          <div>
-            <div>
-              <h3>Spark Event Management</h3>
-              <span>MAIL: <p>Unit #72148 - 1600 90 Avenue SW, Calgary, AB T2V 5H9</p> </span>
-              <span>OFFICE: <p>Unit #200 - 1110 7 Street SW, Calgary, AB T2R 1</p> </span>
-              <span>o. (587) 880-2672   m. (403) 990-8968</span>
-              <span>tf. 1-800-281-0697   f. 1-800-281-0697</span>
+       
+        <div className='grid grid-cols-3'>
+          {/* first column */}
+          <div className='col-span-2'>
+            <div className='w-[70%] text-center my-20 mx-32'>
+              <h3 className='pb-5 text-2xl pr-10'>Spark Event Management</h3>
+              <span className='flex text-lg'>MAIL: <p>Unit #72148 - 1600 90 Avenue SW, Calgary, AB T2V 5H9</p> </span>
+              <span className='flex text-lg'>OFFICE: <p>Unit #200 - 1110 7 Street SW, Calgary, AB T2R 1</p> </span>
+              <span className='pr-10'>o. (587) 880-2672   m. (403) 990-8968</span> <br />
+              <span className='pr-10'>tf. 1-800-281-0697   f. 1-800-281-0697</span>
             </div>
 
-            <div>
-              <h2>api</h2>
+            <div className='m-20 border h-[26rem] w-[42rem] rounded-sm'>
+              {/* <h2>api</h2> */}
             </div>
 
-            <div>
-              <h2>Name <span>(required)</span></h2>
-              
+            <div className='m-20 w-[100%]'>
               <div>
-                <div>
-                  <label htmlFor="">First Name</label>
-                  <input type="text" />
+                <h2 className='text-lg'>Name <span >(required)</span></h2>
+
+                <div className=''>
+                  <div className='flex my-5'>
+                    <div className='block'>
+                      <label htmlFor="" className='text-md'>First Name:</label>
+                      <input type="text" className='py-2.5 rounded-md px-8 border bg-gray-500'/>
+                    </div>
+
+                    <div className='block mx-5'>
+                      <label htmlFor="" className='text-md'>Last Name:</label>
+                      <input type="text" className='py-2.5 mr-4 rounded-md border px-8 bg-gray-500'/>
+                    </div>
+                  </div>
+                    
+                  <div className=''>
+
+                    <div className='block'>
+                      l
+                      {/* <p>email:</p> */}
+                      {/* <span className=''>Email Address:</span> */}
+                      <input type="text" className='py-2.5 mr-4 rounded-md border px-[24.5%] bg-gray-500'/>
+                    </div>
+                    
+                    {/* <div className='my-5'>
+                      <label htmlFor="">Phone:</label>
+                      <input type="text" className='py-2.5 mr-4 rounded-md border mx-[7%] px-[24.5%] bg-gray-500'/>
+                    </div> */}
+                    
+                    {/* <div>
+                      <label htmlFor="">Subject:</label>
+                      <input type="text" className='py-2.5 mr-4 rounded-md border mx-[6.5%] px-[24.5%] bg-gray-500'/>
+                    </div> */}
+                    
+                    {/* <div className='my-5'>
+                      <label htmlFor="">Message <span>(required)</span></label>
+                      <textarea name="" id="" className='mr-4 rounded-md border mx-[6.5%] px-[24.5%] bg-gray-500'></textarea>
+                    </div> */}
+                    {/* <button>SAY HI!</button> */}
+                  </div>
                 </div>
-                <div>
-                  <label htmlFor="">Last Name</label>
-                  <input type="text" />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="">Email Address <span>(required)</span></label>
-                <input type="text" />
-
-
-                <label htmlFor="">Phone</label>
-                <input type="text" />
-
-
-                <label htmlFor="">Subject</label>
-                <input type="text" />
-
-
-                <label htmlFor="">Message <span>(required)</span></label>
-                <input type="text" />         
-
-                <button>SAY HI!</button>
               </div>
             </div>
           </div>
-         
-          <div>
+
+          {/* second column */}
+          <div className='col-span-1'>
             <div>
               <span>
                 <img src="" alt="" />
-                <p>As a female-owned business, 
-                  we owe our success to the amazing 
+                <p>As a female-owned business,
+                  we owe our success to the amazing
                   women who have shared their talent
                   with Spark.…
                 </p>
@@ -76,8 +90,8 @@ const Meeting = () => {
               <span>
                 <img src="" alt="" />
                 <p>
-                  All that love you're looking for? 
-                  Give it to yourself. Happy ❤️ day, 
+                  All that love you're looking for?
+                  Give it to yourself. Happy ❤️ day,
                   besties.
                 </p>
                 <a href="">
@@ -89,8 +103,8 @@ const Meeting = () => {
               <span>
                 <img src="" alt="" />
                 <p>
-                  This is how we're sleeping tonight 
-                  knowing we aren't planning the biggest 
+                  This is how we're sleeping tonight
+                  knowing we aren't planning the biggest
                   sporting event of the year... Good luck t…
                 </p>
                 <a href="">
@@ -115,8 +129,8 @@ const Meeting = () => {
               <span>
                 <img src="" alt="" />
                 <p>
-                  We hope everyone had a wonderful holiday break 
-                  and were able to cherish the quiet moments of 
+                  We hope everyone had a wonderful holiday break
+                  and were able to cherish the quiet moments of
                   the season. Looking fo…
                 </p>
                 <a href="">
@@ -124,16 +138,16 @@ const Meeting = () => {
                   Jan 3, 2022, 7:01 AM
                 </a>
               </span>
-              
+
               <span>
                 twitter
               </span>
             </div>
 
           </div>
-      </div>
-      </div>
+        </div>
 
+      </div>
 
     </div>
   )
