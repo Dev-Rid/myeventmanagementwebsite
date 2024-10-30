@@ -1,6 +1,25 @@
-import React from 'react'
+import axios from 'axios';
 
 const Meeting = () => {
+
+  const hookApi = async () =>{
+    try {
+      const map = await axios("ktkAxTFH_PDaimfj0Z-h895aW64g9RsPiZ4MjTjofdg")
+        // console.log(map);
+        console.log(map.request);
+        if(map.status === 200){
+          // console.log("i am four");
+          console.log(map.responseText.json());
+          
+        }
+      
+    } catch (error) {
+      console.log(error);
+    } 
+  }  
+  
+  hookApi()
+
   return (
     <div className='bg-gray-500'>
       <div>
@@ -21,6 +40,7 @@ const Meeting = () => {
             </div>
 
             <div className='m-20 border h-[26rem] w-[42rem] rounded-sm'>
+              
               {/* <h2>api</h2> */}
             </div>
 
@@ -32,38 +52,36 @@ const Meeting = () => {
                   <div className='flex my-5'>
                     <div className='block'>
                       <label htmlFor="" className='text-md'>First Name:</label>
-                      <input type="text" className='py-2.5 rounded-md px-8 border bg-gray-500'/>
+                      <input type="text" className='py-2.5 rounded-sm px-8 border bg-gray-500'/>
                     </div>
 
                     <div className='block mx-5'>
                       <label htmlFor="" className='text-md'>Last Name:</label>
-                      <input type="text" className='py-2.5 mr-4 rounded-md border px-8 bg-gray-500'/>
+                      <input type="text" className='py-2.5 mr-4 rounded-sm border px-8 bg-gray-500'/>
                     </div>
                   </div>
                     
                   <div className=''>
 
                     <div className='block'>
-                      l
-                      {/* <p>email:</p> */}
-                      {/* <span className=''>Email Address:</span> */}
-                      <input type="text" className='py-2.5 mr-4 rounded-md border px-[24.5%] bg-gray-500'/>
+                      <p className='font-semilight'>Email:</p>
+                      <input type="text" className='text-start py-2.5 mr-4 mt-2 rounded-sm border w-[42rem] bg-gray-500'/>
                     </div>
                     
-                    {/* <div className='my-5'>
-                      <label htmlFor="">Phone:</label>
-                      <input type="text" className='py-2.5 mr-4 rounded-md border mx-[7%] px-[24.5%] bg-gray-500'/>
-                    </div> */}
+                    <div className='my-5'>
+                      <p htmlFor="" className='font-semilight'>Phone:</p>
+                      <input type="text" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42rem] bg-gray-500'/>
+                    </div>
                     
-                    {/* <div>
-                      <label htmlFor="">Subject:</label>
-                      <input type="text" className='py-2.5 mr-4 rounded-md border mx-[6.5%] px-[24.5%] bg-gray-500'/>
-                    </div> */}
+                    <div>
+                      <p htmlFor="" className='font-semilight'>Subject:</p>
+                      <input type="text" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42rem] bg-gray-500'/>
+                    </div>
                     
-                    {/* <div className='my-5'>
-                      <label htmlFor="">Message <span>(required)</span></label>
-                      <textarea name="" id="" className='mr-4 rounded-md border mx-[6.5%] px-[24.5%] bg-gray-500'></textarea>
-                    </div> */}
+                    <div className='my-5'>
+                      <p htmlFor="" className='font-semilight'>Message <span>(required)</span></p>
+                      <textarea name="" id="" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42.1rem] bg-gray-500'></textarea>
+                    </div>
                     {/* <button>SAY HI!</button> */}
                   </div>
                 </div>

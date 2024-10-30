@@ -2,13 +2,14 @@ import { createBrowserRouter } from "react-router-dom";
 import Homepage from "../components/homepage";
 import Home from "../components/homepage/home";
 import ErrorPage from "../errorpage";
-import About from "../components/homepage/about";
 import Service from "../components/homepage/service";
 import Event from "../components/homepage/event";
 import Blog from "../components/homepage/blog";
 import Meeting from "../components/homepage/meeting";
 
+
 export const route = createBrowserRouter([
+
     {
         path: '/',
         element: <Homepage />,

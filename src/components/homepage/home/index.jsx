@@ -3,17 +3,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "react-router-dom"
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { useHowItWork} from './hooks'
+import { useEffect } from 'react'
+import { AOS } from 'aos'
+import 'aos/dist/aos.css'
 
 
 const Home = () => {
+  
+  // useEffect(() => {
+  //   console.log(AOS)
+  //   AOS.init({
+
+  //     duration: 1200,
+  //     once: true, 
+  //   });
+  // }, []);
 
   const { howItWorkList } = useHowItWork()
 
   return (
+    
   <div>
       <div className="h-dvh bg-gray-500">
       <div className='primary h-[30rem] mydiv pt-5'>
-          <h2 className="text-center text-gray-400 text-7xl pt-16 font-semibold">Event Planning Is <br /> Hard.</h2>
+
+          <h2 className="text-center text-gray-400 text-7xl pt-16 font-semibold" data-aos="fade-up">Event Planning Is <br /> Hard.</h2>
           <p className="text-center text-2xl text-gray-400 font-bold pt-10">WE CAN HELP YOU</p>
       </div>
       
