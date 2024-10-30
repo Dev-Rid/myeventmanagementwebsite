@@ -9,9 +9,9 @@
 .primary{
   background-image: url(/src/IMGs/night-sky.jpg);
   background-size: cover;
-  background-color: #f0f0f0;
-  background-position: center;
-  filter: blur(0px);
+  /* background-color: #f0f0f0; */
+  /* background-position: center; */
+  /* filter: blur(0px); */
 
 }
 

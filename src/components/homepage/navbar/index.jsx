@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  
+
   return (
     // <div class="h-14 bg-gradient-to-r from-purple-500 to-pink-500"></div>
     <div className=''>

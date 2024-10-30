@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Meeting = () => {
 
@@ -80,7 +81,7 @@ const Meeting = () => {
                     
                     <div className='my-5'>
                       <p htmlFor="" className='font-semilight'>Message <span>(required)</span></p>
-                      <textarea name="" id="" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42.1rem] bg-gray-500'></textarea>
+                      <textarea name="" id="" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42.1rem] h-[7rem] bg-gray-500'></textarea>
                     </div>
                     {/* <button>SAY HI!</button> */}
                   </div>
@@ -91,75 +92,91 @@ const Meeting = () => {
 
           {/* second column */}
           <div className='col-span-1'>
-            <div>
-              <span>
-                <img src="" alt="" />
-                <p>As a female-owned business,
-                  we owe our success to the amazing
-                  women who have shared their talent
-                  with Spark.…
-                </p>
-                <a href="">
-                  https://t.co/PakmHWuN9s
-                  Mar 8, 2022, 8:00 AM
-                </a>
+            <div className='mt-[5rem] ml-8'>
+              <span className='flex'>
+                <img src="src/IMGs/sparkstar.jpeg" alt="" className='h-[3.6rem] rounded-sm'/>
+                <div className='ml-3 w-[50%]'>
+                  <p>As a female-owned business,
+                    we owe our success to the amazing
+                    women who have shared their talent
+                    with Spark.…
+                  </p>
+                  <a href="" className='text-gray-400'>
+                    https://t.co/PakmHWuN9s
+                    Mar 8, 2022, 8:00 AM
+                  </a>    
+                </div>
               </span>
 
-              <span>
-                <img src="" alt="" />
-                <p>
-                  All that love you're looking for?
-                  Give it to yourself. Happy ❤️ day,
-                  besties.
-                </p>
-                <a href="">
-                  https://t.co/FiAMw7Qt2z
-                  Feb 14, 2022, 8:01 AM
-                </a>
+              <span className='flex mt-[6rem]  w-[50%]'>
+                <img src="src/IMGs/sparkstar.jpeg" alt="" className='h-[3.6rem] rounded-sm' />
+                <div className='ml-3'>
+                  <p>
+                    All that love you're looking for?
+                    Give it to yourself. Happy ❤️ day,
+                    besties.
+                  </p>
+                  <a href="" className='text-gray-400'>
+                    https://t.co/FiAMw7Qt2z
+                    Feb 14, 2022, 8:01 AM
+                  </a>
+                </div>
+                
               </span>
 
-              <span>
-                <img src="" alt="" />
-                <p>
-                  This is how we're sleeping tonight
-                  knowing we aren't planning the biggest
-                  sporting event of the year... Good luck t…
-                </p>
-                <a href="">
-                  https://t.co/kztLXV1RmW
-                  Feb 12, 2022, 9:05 AM
-                </a>
+              <span className='flex mt-[6rem] w-[50%]'>
+                <img src="src/IMGs/sparkstar.jpeg" alt="" className='h-[3.6rem] rounded-sm' />
+                <div className='ml-3'>
+                  <p>
+                    This is how we're sleeping tonight
+                    knowing we aren't planning the biggest
+                    sporting event of the year... Good luck t…
+                  </p>
+                  <a href="" className='text-gray-400'>
+                    https://t.co/kztLXV1RmW
+                    Feb 12, 2022, 9:05 AM
+                  </a>
+                </div>
               </span>
 
-              <span>
-                <img src="" alt="" />
-                <p>
-                  #TBT: How cute were these sweet treats we
-                  gave for Valentines Day? To sweeten the deal
-                  even more, we had limited-ti…
-                </p>
-                <a href="">
-                  https://t.co/fTFPnqNJIK
-                  Feb 10, 2022, 9:01 AM
-                </a>
+              <span className='flex mt-[6rem] w-[50%]'>
+                <img src="src/IMGs/sparkstar.jpeg" alt="" className='h-[3.6rem] rounded-sm' />
+                <div className='ml-3'>
+                  <p>
+                    #TBT: How cute were these sweet treats we
+                    gave for Valentines Day? To sweeten the deal
+                    even more, we had limited-ti…
+                  </p>
+                  <a href="" className='text-gray-400'>
+                    https://t.co/fTFPnqNJIK
+                    Feb 10, 2022, 9:01 AM
+                  </a>
+                </div>
+                
               </span>
 
-              <span>
-                <img src="" alt="" />
-                <p>
-                  We hope everyone had a wonderful holiday break
-                  and were able to cherish the quiet moments of
-                  the season. Looking fo…
-                </p>
-                <a href="">
-                  https://t.co/uyze1eZjzP
-                  Jan 3, 2022, 7:01 AM
-                </a>
+              <span className='flex mt-[6rem]'>
+                  <img src="src/IMGs/sparkstar.jpeg" alt="" className='h-[3.6rem] rounded-sm' />
+                <div className='ml-3 w-[50%]'>
+                  <p>
+                    We hope everyone had a wonderful holiday break
+                    and were able to cherish the quiet moments of
+                    the season. Looking fo…
+                  </p>
+                  <a href="" className='text-gray-400'>
+                    https://t.co/uyze1eZjzP
+                    Jan 3, 2022, 7:01 AM
+                  </a>
+                </div>
+                
               </span>
 
-              <span>
-                twitter
-              </span>
+            {/* <div className='ml-[3rem] text-center mt-10 rounded-sm border'>
+                <Link >
+                  twitter
+                </Link>
+            </div> */}
+              
             </div>
 
           </div>
