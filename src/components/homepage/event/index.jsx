@@ -1,21 +1,30 @@
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useImgs } from './hooks'
 import UseEventImgsHook from './hooks/useEventImgsHook'
 
+import Aos from "aos"
+import "aos/dist/aos.css"
+
+
 const Event = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
+  
   const { imgs } = useImgs()
   return (
     <div className='bg-gray-500'>
-      <div className="event-busy h-[18rem] text-center text-gray-100 pt-20 bg-cover">
-        <h2 className='text-8xl'>Busy, Busy, Busy</h2>
-        <p className='text-4xl pt-5 uppercase'>A few of our recent events</p>
+      <div className="event-busy h-[22rem] text-center text-gray-100 pt-20 bg-cover">
+        <h2 className='text-8xl' data-aos="fade">Busy, Busy, Busy</h2>
+        <p className='text-4xl pt-5 uppercase' data-aos="fade">A few of our recent events</p>
      </div>
 
-      <div className='text-center pt-10'> 
-        <h3 className='text-semibold text-3xl'>Wow, we've had a busy year... but always make time for fun!</h3>
+      <div className='text-center pt-24' data-aos="fade-down-top"> 
+        <h3 className='text-semibold text-3xl' >Wow, we've had a busy year... but always make time for fun!</h3>
         
         <p className='p-5 text-center flex justify-center text-lg mx-auto w-[60%]'>
           Our clients include not-for-profit organizations, corporate clients,  
@@ -25,7 +34,7 @@ const Event = () => {
         </p>
 
         <div>
-          <div className='pminac h-[12rem] bg-contain text-gray-300'>
+          <div className='pminac h-[12rem] bg-contain text-gray-300 mt-12'>
             <p className='text-7xl p-10'>PMINAC Conference</p>
           </div>
 

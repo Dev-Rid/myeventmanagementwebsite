@@ -1,35 +1,28 @@
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from 'react';
 
 const Meeting = () => {
 
-  const hookApi = async () =>{
-    try {
-      const map = await axios("ktkAxTFH_PDaimfj0Z-h895aW64g9RsPiZ4MjTjofdg")
-        // console.log(map);
-        console.log(map.request);
-        if(map.status === 200){
-          // console.log("i am four");
-          console.log(map.responseText.json());
-          
-        }
-      
-    } catch (error) {
-      console.log(error);
-    } 
-  }  
-  
-  hookApi()
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
+
 
   return (
     <div className='bg-gray-500'>
       <div>
-          <div className='meeting h-[18rem] text-center text-gray-100 pt-20'>
-            <h2 className='text-8xl font-semibold text-gray-300'>Set Up A Meeting</h2>
+          <div className='meeting h-[22rem] text-center text-gray-100 pt-20'>
+            <h2 className='text-8xl font-semibold text-gray-300 mt-5' data-aos="fade-down-fade">Set Up A Meeting</h2>
           </div>
 
        
-        <div className='grid grid-cols-3'>
+        <div className='grid grid-cols-3 mt-5' data-aos="fade-down-top">
           {/* first column */}
           <div className='col-span-2'>
             <div className='w-[70%] text-center my-20 mx-32'>
@@ -66,22 +59,22 @@ const Meeting = () => {
 
                     <div className='block'>
                       <p className='font-semilight'>Email:</p>
-                      <input type="text" className='text-start py-2.5 mr-4 mt-2 rounded-sm border w-[42rem] bg-gray-500'/>
+                      <input type="text" className='text-start py-2.5 mr-4 mt-2 rounded-sm border w-[42.9rem] bg-gray-500 pl-3'/>
                     </div>
                     
                     <div className='my-5'>
                       <p htmlFor="" className='font-semilight'>Phone:</p>
-                      <input type="text" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42rem] bg-gray-500'/>
+                      <input type="number" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42.9rem] bg-gray-500 pl-3'/>
                     </div>
                     
                     <div>
                       <p htmlFor="" className='font-semilight'>Subject:</p>
-                      <input type="text" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42rem] bg-gray-500'/>
+                      <input type="text" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42.9rem] bg-gray-500 pl-3'/>
                     </div>
                     
                     <div className='my-5'>
                       <p htmlFor="" className='font-semilight'>Message <span>(required)</span></p>
-                      <textarea name="" id="" className='py-2.5 mr-4 mt-2 rounded-sm border w-[42.1rem] h-[7rem] bg-gray-500'></textarea>
+                      <textarea name="" id="" className='py-2.5 mr-4 mt-2 rounded-sm border w-[43rem] h-[7rem] bg-gray-500 pl-3'></textarea>
                     </div>
                     {/* <button>SAY HI!</button> */}
                   </div>

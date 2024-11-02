@@ -1,24 +1,31 @@
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { blogContent } from './hook'
 
-const Blog = () => {
+import Aos from "aos"
+import "aos/dist/aos.css"
 
+const Blog = () => {
   const { blogPreContent } = blogContent()
   
   const handleGoToAnotherPage = (e) => {
     e.preventDefault() 
   }
   
+    useEffect(() => {
+      Aos.init({ duration: 2000 })
+    }, [])
+
+
   return (
     <div className="bg-gray-500">
-      <div className='blogBg h-[18rem] bg-cover text-center pt-20 opacity-30'>
-        <h2 className='text-8xl font-semilight text-gray-400'>Thoughts & News</h2>
+      <div className='blogBg h-[22rem] bg-cover text-center pt-20 opacity-30'>
+        <h2 className='text-8xl font-semibold text-gray-400 mt-5' data-aos="fade-down-fade">Thoughts & News</h2>
       </div>
 
-    <div className='grid grid-cols-4'>
+      <div className='grid grid-cols-4 mt-10' data-aos="fade-down-top">
         <div className='col-span-3'>
           {(blogPreContent.map((eachBlog) => (
             <div className='' key={eachBlog.id}>
@@ -33,7 +40,7 @@ const Blog = () => {
                   <div className='flex font-light py-3 cursor-pointer'>
                     <p className='pr-3'>{eachBlog.writer}</p> •
                     <p className='mx-2'>{eachBlog.date}</p>
-                  </div>
+                  </div>  
                 </div>
               </div>
 

@@ -1,6 +1,5 @@
 import './App.css'
 import Homepage from './components/homepage'
-import Aos from "aos"
 import "aos/dist/aos.css"
 
 function App() {

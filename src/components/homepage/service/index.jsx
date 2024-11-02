@@ -3,27 +3,43 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
 import { threeEvents } from "./hook"
 
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { useEffect, useState } from "react"
+
 const Service = () => {
+  const [first, setFirst] = useState(null)
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
+
+  useEffect(() => {
+    setFirst("Spark has a diverse team, each offering expert knowledge in their field. From strategy planning, budgeting, and comprehensive registration support to marketing and branding we bring the most current, innovative and professional market expertise.")
+    Aos.init({ duration: 1000 })
+  }, [first])
+
 
   const { theThreeEventsList } = threeEvents() 
 
   return (
     <div className=" bg-gray-500">
-      <div className="service h-[18rem] text-center text-gray-100 pt-20">
-        <h2 className="text-8xl">Talent & Skill</h2>
-        <p className="text-4xl pt-5 uppercase">There are no hurdles we can‘t jump</p>
+      <div className="service h-[22rem] text-center text-gray-100 pt-20">
+        <h2 className="text-8xl" data-aos="fade">Talent & Skill</h2>
+        <p className="text-4xl pt-5 uppercase" data-aos="fade">There are no hurdles we can‘t jump</p>
        </div>
 
        <div className="text-center flex justify-center text-4xl mx-auto w-[80%] pt-20 leading-snug tracking-wide font-light border-b pb-20">
-        <p className="service-cont-1">
-          Spark has a diverse team, each offering expert knowledge in their field. 
+        <p className="service-cont-1" data-aos="fade-down-top">{first}
+          {/* Spark has a diverse team, each offering expert knowledge in their field. 
           From strategy planning, budgeting,and comprehensive registration support 
           to marketing and branding we bring the most current, innovative and professional 
-          market expertise.
+          market expertise. */}
         </p>
        </div>
 
-      <div className="flex gap-5 p-20 w-[100%]">
+      <div className="flex gap-5 p-20 w-[100%]" data-aos="fade-down-top">
         {(theThreeEventsList.map((eachEvent) =>(
           <div key={eachEvent.id} className="w-[80rem] relative">
             <h3 className="text-center pb-8 uppercase font-semibold text-lg">{eachEvent.name}</h3>
