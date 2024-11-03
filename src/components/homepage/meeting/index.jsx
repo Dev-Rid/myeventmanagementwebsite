@@ -6,6 +6,7 @@ import "aos/dist/aos.css"
 import { useEffect } from 'react';
 
 const Meeting = () => {
+  
 
 
   useEffect(() => {
@@ -34,7 +35,9 @@ const Meeting = () => {
             </div>
 
             <div className='m-20 border h-[26rem] w-[42rem] rounded-sm'>
-              
+              <p>
+                
+              </p>
               {/* <h2>api</h2> */}
             </div>
 

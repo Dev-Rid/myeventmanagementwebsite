@@ -14,8 +14,8 @@ const Event = () => {
     Aos.init({ duration: 2000 })
   }, [])
 
-  
   const { imgs } = useImgs()
+  
   return (
     <div className='bg-gray-500'>
       <div className="event-busy h-[22rem] text-center text-gray-100 pt-20 bg-cover">

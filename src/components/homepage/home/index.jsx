@@ -19,13 +19,12 @@ const Home = () => {
     
   <div>
       <div className="h-dvh bg-gray-500">
-      <div className='primary h-[30rem] mydiv pt-5'>
-
-          <h2 data-aos="zoom-in" className="text-center text-gray-400 text-8xl pt-16 font-semibold">Event Planning Is <br /> Hard.</h2>
-          <p data-aos="zoom-in" className="text-center text-3xl text-gray-400 font-bold pt-10">WE CAN HELP YOU</p>
+      <div className='primary h-[30rem] mydiv pt-5 md:pt-10'>
+          <h2 data-aos="zoom-in" className="text-center text-gray-400 text-4xl sm:text-5xl md:text-7xl pt-16 font-semibold">Event Planning Is <br /> Hard.</h2>
+          <p data-aos="zoom-in" className="text-center sm:text-xl md:text-3xl text-gray-400 font-bold pt-10">WE CAN HELP YOU</p>
       </div>
       
-      <div  className="p-9 bg-gray-500 h-[35rem] text-black font-light text-center text-4xl">
+      <div  className="p-9 bg-gray-500 lg:h-[40rem] text-black font-light text-center text-3xl sm:text-4xl md:text-5xl">
           <p data-aos="fade-down-right" className=" pt-10" >
             <span   className="text-pink-900 text-5xl font-medium">Tech Event</span> is a full service event
              management firm based in Calgary, Alberta that was created by 

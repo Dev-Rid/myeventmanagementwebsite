@@ -15,7 +15,7 @@ const Homepage = () => {
     <div className=''>
       <Navbar data-aos="fade"/>
           {/* <img src="/src/IMGs/night-sky.jpg" alt="" className='' />   */}
-      <Outlet/>
+      {/* <Outlet/> */}
     </div>
   )
 }

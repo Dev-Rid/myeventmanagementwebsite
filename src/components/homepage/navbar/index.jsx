@@ -11,32 +11,54 @@ const Navbar = () => {
     }, [])
 
   return (
-    <div className=''>
-      <nav className="bg-gradient-to-r from-purple-900 to-pink-900 flex list-none justify-between border-b p-10 text-center ">
-            <div className=''>
-              <span data-aos="fade" href="/" className="md:text-3xl text-xl text-gray-400 font-semibold"> Event Tech</span>
-            </div>
 
-            <div className="flex space-x-6 text-gray-300 text-sm md:text-lg font-semibold">
+    <div>
+      <nav className="bg-gradient-to-r from-purple-900 to-pink-900 p-14 w-full h-[10rem] relative">
+        <div className="flex justify-between items-center mx-auto max-w-screen-xl p-4">
 
-                <Link data-aos="fade"  to="/home" className='text-purple-400'>ABOUT</Link>
-            
-                <Link data-aos="fade" to="/service">SERVICES</Link>
+          {/* Logo Section */}
+          <div className="absolute left-12">
+            <span data-aos="fade" href="/" className="text-2xl md:text-4xl text-gray-400 font-bold">Event Tech</span>
+          </div>
 
-                <Link data-aos="fade" to="/event">EVENT</Link>
-            
-                <Link data-aos="fade" to="/blog">BLOG</Link>
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center absolute md:right-10 lg:right-24 md:gap-2 lg:gap-8 ">
+            <Link data-aos="fade" to="/about" className="text-purple-400 text-xl font-semibold">ABOUT</Link>
+            <Link data-aos="fade" to="/service" className="text-gray-400 text-xl font-semibold">SERVICES</Link>
+            <Link data-aos="fade" to="/event" className="text-gray-400 text-xl font-semibold">EVENT</Link>
+            <Link data-aos="fade" to="/blog" className="text-gray-400 text-xl font-semibold">BLOG</Link>
 
-              <span className='border border-gray-500 rounded-sm px-6'>
-                <Link data-aos="fade" to="/meeting" className='text-sm'>SET UP A MEETING</Link>
-              </span>
+            <span className="border border-gray-500 rounded-lg px-4 py-2 text-gray-300 ml-4">
+              <Link data-aos="fade" to="/meeting">SET UP A MEETING</Link>
+            </span>
+          </div>
 
-            </div>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center absolute right-4">
+            <button
+              type="button"
+              className="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
 
-        </nav>
+        </div>
+      </nav>
     </div>
 
-  )
+   )
 }
 
 export default Navbar
