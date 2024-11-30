@@ -8,28 +8,46 @@ import Footer from "../footer";
 
 
 const Create = () => {
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
+    const [email, setEmail] = useState("")
+    const [date, setDate] = useState("")
+    const [venue, setVenue] = useState("")
+    const [agenda, setAgenda] = useState("")
+    const [phone, setPhone] = useState("")
+    const [eventname, setEventName] = useState("")
+
     const [isPending, setIsPending] = useState(false)
 
-    const navigate = useNavigate()
 
-    const handleSubmit = (e) =>{
+    const navigate = useNavigate() // importing navigation and storing inside a variable
+
+  const handleSubmit = (e) =>{
       e.preventDefault()
 
       // setIsPending(true)
       const create = { 
-        firstName: "", 
-        lastName: "", 
-        date: "", 
-        venue: "", 
-        agenda: "", 
-        email: "", 
-        phone: "", 
-        eventname: ""
+        firstName,
+        lastName, 
+        date, 
+        venue, 
+        agenda, 
+        email, 
+        phone, 
+        eventname,
       }
 
-      navigate(`/confirmevent/`, { state: create})
+      localStorage.setItem("create", JSON.stringify(create))
+
+          navigate(`/confirmevent/`, { state: create})
+
+      // useEffect(() =>{
+      //   setTimeout(() => {
+      //     navigate(`/confirmevent/`, { state: create})
+      //   }, 1000);
+      // })
     
-}
+  }
 
   // useEffect animation
   useEffect(() => {
@@ -46,47 +64,116 @@ const Create = () => {
           <h2 className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-gray-300 mt-5' data-aos="fade-down-top">Create an event</h2>
         </div>
        
-        <div className='md:block lg:grid grid-cols-3 mt-5 ' data-aos="fade-down-top">
-          {/* first column */}
-          <div className='col-span-2 -ml-10'>
-            <div className='w-[20rem] text-center my-20 mx-[2rem] md:mx-[5rem] hidden'>
-              <h3 className='pb-5 text-2xl pr-10'>Spark Event Management</h3>
-              <span className='flex text-lg'>MAIL: <p>Unit #72148 - 1600 90 Avenue SW, Calgary, AB T2V 5H9</p> </span>
-              <span className='flex text-lg'>OFFICE: <p>Unit #200 - 1110 7 Street SW, Calgary, AB T2R 1</p> </span>
-              <span className='pr-10'>o. (587) 880-2672   m. (403) 990-8968</span> <br />
-              <span className='pr-10'>tf. 1-800-281-0697   f. 1-800-281-0697</span>
-            </div>
+        <div className='md:block mt-5 ' data-aos="fade-down-top">
+          
+          <div className=''>
+            <div className='w-[100%]'>
+              <div className="mt-12">
 
-            <div className='m-20 border h-[26rem] lg:w-[42rem] md:w-[38rem] sm:w-[30rem] hidden sm:mx-xuto  rounded-sm'>
-              <p>
+                <h2 className='text-3xl font-semibold text-center'>Create your event <span className="text-yellow-600">here ↡ </span></h2>
                 
-              </p>
-              <h2>api</h2>
-            </div>
+                <div className="min-h-screen flex items-center justify-center">
+                  <form className="p-26 mt-10 rounded-lg w-full max-w-md" onSubmit={handleSubmit}>
+                    <div className="space-y-5">
+                      <div>
+                        <label className="block font-medium mb-1">First Name:</label>
+                        <input 
+                          type="text"
+                          onChange={(e) => setFirstName(e.target.value)}
+                          className="w-full border border-gray-400 bg-gray-500 rounded-md p-2" />
+                      </div>  
+
+                      <div>
+                        <label className="block font-medium mb-1">Last Name:</label>
+                        <input 
+                          type="text"
+                          onChange={(e) => setLastName(e.target.value)}
+                          className="w-full border border-gray-400 bg-gray-500 rounded-md p-2" />
+                      </div>
+
+                      <div>
+                        <label className="block font-medium mb-1">Email:</label>
+                        <input 
+                          type="text"
+                          onChange={(e) => setEmail(e.target.value)}
+                          className="w-full border border-gray-400 bg-gray-500 rounded-md p-2" />
+                      </div>
+
+                      <div>
+                        <label className="block font-medium mb-1">Phone:</label>
+                        <input 
+                          type="number"
+                          onChange={(e) => setPhone(e.target.value)}
+                          className="w-full border border-gray-400 bg-gray-500 rounded-md p-2" />
+                      </div>  
+                      
+                      <div>
+                        <label className="block font-medium mb-1">Event Name:</label>
+                        <input 
+                          type="text"
+                          onChange={(e) => setEventName(e.target.value)}
+                          className="w-full border border-gray-400 bg-gray-500 rounded-md p-2" />
+                      </div>  
+                      
+                      <div>
+                        <label className="block font-medium mb-1">Date:</label>
+                        <input 
+                          type="text"
+                          onChange={(e) => setDate(e.target.value)}
+                          className="w-full border border-gray-400 bg-gray-500 rounded-md p-2" />
+                      </div>  
+
+                      
+                    <div className="my-5 ">
+                      <p className='font-semibold text-lg'>Venue:</p>
+                      <select name="" 
+                        className="w-full border border-gray-400 bg-gray-500 rounded-md p-2"
+                        onChange={(e) => setVenue(e.target.value)}
+                        >
+                        <option value="">-select a venue-</option>
+                        <option value={"Nigeria"}>Nigeria</option>
+                        <option value={"paris"}>Paris</option>
+                        <option value={"united kingdom"}>United Kingdom</option>
+                        <option value={"u.s.a"}>U.S.A</option>
+                        <option value={"canada"}>Canada</option>
+                      </select>
+                    </div>
+
+                    <div className='my-5'>
+                      <p htmlFor="" className='font-semibold text-lg'>Agenda <span className="">(required)</span></p>
+                      <textarea name="" placeholder="Including the type of your proposed event and the exact location of event" 
+                        className="w-full border border-gray-400 bg-gray-500 rounded-md p-2"
+                        // value={agenda}
+                        onChange={(e) => setAgenda(e.target.value)}
+                      ></textarea>
+                    </div>
 
 
+                    </div>
 
-            <div className='m-20 w-[100%]'>
-              <div>
-                <h2 className='text-2xl font-semibold'>Create your event <span className="text-yellow-600">here ↡ </span></h2>
-
-                <form className='' onSubmit={handleSubmit}>
+                  <div className="text-center">
+                    { !isPending && <button className="p-3 mt-6 px-28 border border-gray-600 text-lg text-gray-400 rounded-full hover:bg-slate-600 transition ease-in">Register Event</button>} 
+                    { isPending && <button className=" mt-6 text-gray-400 border px-28 py-3 rounded-full text-lg active:bg-gray-400 transition active:text-lg active:text-gray-900  ease-in duration-200"> Registering event </button> }
+                  </div>
+                    
+                  </form>
+                </div>  
+                
+                {/* <form className='' onSubmit={handleSubmit}>
                   <div className='block md:flex my-5 sm:mx-auto '>
                     <div className='block'>
                       <label htmlFor="" className='font-semibold text-lg'>First Name:</label>
                       <input type="text"
-                       className='py-2.5 rounded-sm -px-5 sm:px-6 md:px-8 border bg-gray-500'
-                     
-                       //  value={firstName}
-                        // onChange={(e) =>handleChange(e.target.value)}
-                        // onChange={(e) => setFirstName(e.target.value)}
+                       className='py-2.5 rounded-sm -px-5 sm:px-6 md:px-8 border bg-gray-500 border-gray-400'
+                      //  value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                        />
                     </div>
 
                     <div className=' block mt-0 sm:mt-5 md:mt-0 md:ml-4 lg:ml-8'>
                       <label htmlFor="" className='font-semibold text-lg'>Last Name:</label>
                       <input type="text"
-                        className='py-2.5 mt-10 sm:mt-0 rounded-sm border  sm:px-6 md:px-8 bg-gray-500'
+                        className='py-2.5 mt-10 sm:mt-0 rounded-sm border  sm:px-6 md:px-8 bg-gray-500 border-gray-400'
                         // value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                       />
@@ -96,7 +183,7 @@ const Create = () => {
                   <div className='my-5'>
                     <p htmlFor="" className='font-semibold text-lg'>Email:</p>
                     <input type="string"
-                      className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 pl-3'
+                      className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 border-gray-400 pl-3'
                       // value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -105,7 +192,7 @@ const Create = () => {
                   <div className='my-5'>
                     <p htmlFor="" className='font-semibold text-lg'>Phone:</p>
                     <input type="string"
-                      className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 pl-3'
+                      className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 border-gray-400 pl-3'
                       // value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                     />
@@ -114,7 +201,7 @@ const Create = () => {
                   <div className='my-5'>
                     <p htmlFor="" className='font-semibold text-lg'>Event Name:</p>
                     <input type="string"
-                      className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 pl-3'
+                      className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 border-gray-400 pl-3'
                       // value={eventname}
                       onChange={(e) => setEventName(e.target.value)}
                     />
@@ -124,7 +211,7 @@ const Create = () => {
                     <div className='block'>
                       <p className='font-semibold text-lg'>Date</p>
                       <input type="number" placeholder="Date of event" 
-                        className='text-start text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 pl-3' 
+                        className='text-start text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 border-gray-400 pl-3' 
                         // value={date}
                         onChange={(e) => setDate(e.target.value)}
                       />
@@ -133,7 +220,7 @@ const Create = () => {
                     <div className="my-5 ">
                       <p className='font-semibold text-lg'>Venue:</p>
                       <select name="" 
-                        className='px-20 text-start text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 pl-3' 
+                        className='px-20 text-start text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] bg-gray-500 border-gray-400 pl-3' 
                         onChange={(e) => setVenue(e.target.value)}
                           // onChange={(e) => console.log(e.target.value)}
                         >
@@ -149,7 +236,7 @@ const Create = () => {
                     <div className='my-5'>
                       <p htmlFor="" className='font-semibold text-lg'>Agenda <span className="">(required)</span></p>
                       <textarea name="" placeholder="Including the type of your proposed event and the exact location of event" 
-                        className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] h-[7rem] bg-gray-500 pl-3' 
+                        className='text-2xl py-2.5 mr-4 mt-2 rounded-sm border w-[22rem] sm:w-[30rem] md:w-[42rem] lg:w-[43rem] h-[7rem] bg-gray-500 border-gray-400 pl-3' 
                         // value={agenda}
                         onChange={(e) => setAgenda(e.target.value)}
                       ></textarea>
@@ -160,7 +247,7 @@ const Create = () => {
                  { !isPending && <button className=" text-gray-400 border px-10 py-3 rounded text-lg active:bg-gray-400 transition active:text-lg active:text-gray-900  ease-in duration-200"> Register event </button> } 
                  { isPending && <button className=" text-gray-400 border px-10 py-3 rounded text-lg active:bg-gray-400 transition active:text-lg active:text-gray-900  ease-in duration-200"> Registering event </button> }
                 
-                </form>
+                </form> */}
               </div>
             </div>
 
@@ -168,7 +255,7 @@ const Create = () => {
 
           {/* second column */}
       
-          <div className='col-span-1 ml-10'>
+          {/* <div className='col-span-1 ml-10'>
             <div className='mt-[5rem] ml-8 '>
               <span className='block sm:flex md:block lg:flex'>
                 <img src="src/IMGs/sparkstar.jpeg" alt="" className='h-[3.6rem] rounded-sm md:ml-3'/>
@@ -249,7 +336,7 @@ const Create = () => {
 
             </div>
 
-          </div>
+          </div> */}
 
         </div>
 
@@ -486,15 +573,15 @@ export default Create
 
 // const Create = () => {
 
-//     const [firstName, setFirstName] = useState("")
-//     const [lastName, setLastName] = useState("")
-//     const [email, setEmail] = useState("")
-//     const [date, setDate] = useState("")
-//     const [venue, setVenue] = useState("")
-//     const [agenda, setAgenda] = useState("")
-//     const [phone, setPhone] = useState("")
-//     const [eventname, setEventName] = useState("")
-//     const [isPending, setIsPending] = useState(false)
+    // const [firstName, setFirstName] = useState("")
+    // const [lastName, setLastName] = useState("")
+    // const [email, setEmail] = useState("")
+    // const [date, setDate] = useState("")
+    // const [venue, setVenue] = useState("")
+    // const [agenda, setAgenda] = useState("")
+    // const [phone, setPhone] = useState("")
+    // const [eventname, setEventName] = useState("")
+    // const [isPending, setIsPending] = useState(false)
 //     const navigate = useNavigate()
 
 //     const handleSubmit = (e) =>{
