@@ -1,0 +1,25 @@
+{
+    "blogOne": [
+        {
+            "title": "biola is good",
+            "body": "as a female",
+            "id": 1
+        },
+        {
+            "title": "ridwan is good",
+            "body": "as a male",
+            "id": 2
+        },
+        {
+            "title": "aisha is good",
+            "body": "as a female",
+            "id": 3
+        },
+        {
+            "title": "teegee is good",
+            "body": "as a male",
+            "id": 4
+        }
+
+    ]
+}

@@ -3,7 +3,7 @@ export const blogContent = () =>{
         { 
             image: "/src/IMGs/We're+Hiring_Blog-01.jpg",
             title: "Do You Like to Colour Code!?",
-            body: "Do you like things to be organized and orderly? Do you thrive using post-its and to-do lists? Is colour-coding your past time of choice? If so, we might have the job for you! Spark Event Management(Spark) is seeking a contract event & administrative assistant to join our team in Calgary, AB.We ask that the candidate be available for 30 - 40 hours per week for this position, starting immediately.The ideal candidate for this position is a highly organized, detail - oriented and self - motivated individual, who thrives in a dynamic and entrepreneurial environment.",
+            body: "Do you like things to be organized and orderly? Do you thrive using post-its and to-do lists? Is colour-coding your past time of choice? If so, we might have the job for you! Spark Event Management(Spark) is seeking a contract event & administrative assistant to join our team in Calgary, AB.We ask that the candidate be available for 30 - 40 hours per week for this position, starting immediately.",
             more: "Read More →",
             writer: "Written by Anh",
             date: "Jul 8, 2019",

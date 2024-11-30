@@ -5,7 +5,10 @@ import ErrorPage from "../errorpage";
 import Service from "../components/homepage/service";
 import Event from "../components/homepage/event";
 import Blog from "../components/homepage/blog";
-import Meeting from "../components/homepage/meeting";
+import Details from "@/components/homepage/service/details";
+import Venues from "@/components/homepage/venues";
+import Create from "@/components/homepage/meeting";
+import EventList from "@/components/homepage/meeting/confirmEvent";
 
 
 export const route = createBrowserRouter([
@@ -35,9 +38,19 @@ export const route = createBrowserRouter([
                 element: <Blog/>
             },
             {
-                path: "/meeting",
-                element: <Meeting/>
+                path: "/create",
+                element: <Create/>
+                // element: <Create/>
             },
+            {
+                path: "/service/:id",
+                element: <Details/>
+            },
+            {
+                path: "/confirmevent",
+                element: <EventList />
+            }
+
 
         ],
     },
